@@ -10,8 +10,7 @@ body, html {
 #root {
   height: 100vh; /* Make sure it covers the full viewport height */
   width: 100vw; /* Ensure it takes up the full viewport width */
-  background-image: url('/background.jpg');
- /* Update with the correct path */
+  background-image: url('./background.jpg'); /* Update with the correct path */
   background-size: cover; /* Ensure the image covers the entire element */
   background-position: center center; /* Center the image */
   background-attachment: fixed; /* Keep the image fixed while scrolling */
