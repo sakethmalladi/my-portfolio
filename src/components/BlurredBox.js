@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Box, Typography } from '@mui/material';
 import { styled } from '@mui/system';
 
-const BlurredBox = styled(Box)(({ theme }) => ({
+// Styled component with sliding animation
+const BlurredBox = styled(Box)(({ theme, animate }) => ({
   position: 'absolute',
   top: '20%',
   left: '10%',
@@ -12,17 +13,19 @@ const BlurredBox = styled(Box)(({ theme }) => ({
   backdropFilter: 'blur(10px)', // Blur effect
   boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
   borderRadius: theme.shape.borderRadius,
-  transform: 'translateX(-100%)', // Start off-screen to the left
-  animation: 'slideIn 1s forwards', // Animation
-  '@keyframes slideIn': {
-    '0%': { transform: 'translateX(-100%)' },
-    '100%': { transform: 'translateX(0)' },
-  },
+  transform: animate ? 'translateX(0)' : 'translateX(-100%)', // Animate based on state
+  transition: 'transform 1s', // Smooth transition
 }));
 
 const BlurredBoxComponent = () => {
+  const [animate, setAnimate] = useState(false);
+
+  useEffect(() => {
+    setAnimate(true); // Trigger animation on mount
+  }, []);
+
   return (
-    <BlurredBox>
+    <BlurredBox animate={animate}>
       <Typography variant="h4" component="div">
         Welcome to My Portfolio
       </Typography>

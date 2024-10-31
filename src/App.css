@@ -1,9 +1,10 @@
 body, html {
   margin: 0;
   padding: 0;
-  height: 100%;
+  height: 120%;
   width: 100%;
-  overflow-x: hidden; /* Prevent horizontal scrolling */
+  overflow-x: hidden;
+  overflow-y: hidden; /* Prevent horizontal scrolling */
 }
 
 #root {
@@ -14,6 +15,7 @@ body, html {
   background-position: center center; /* Center the image */
   background-attachment: fixed; /* Keep the image fixed while scrolling */
   background-repeat: no-repeat; /* Prevent repeating of the image */
+  position: relative; /* Make sure #root stays within the viewport */
 }
 
 .app-content {

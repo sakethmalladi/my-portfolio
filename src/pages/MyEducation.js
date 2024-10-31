@@ -74,7 +74,7 @@ const MyEducation = () => {
   return (
     <div>
       <HeadingContainer>
-        <Heading variant="h3">My Education</Heading>
+        <Heading variant="h5">My Education</Heading>
       </HeadingContainer>
       <CardContainer>
         <FlipCard>

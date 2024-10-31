@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Home from './pages/Home';
 import AboutMe from './pages/AboutMe';
 import MyEducation from './pages/MyEducation';
@@ -38,7 +38,12 @@ function App() {
               <MenuIcon />
             </IconButton>
             <Box sx={{ flexGrow: 1, display: 'flex', justifyContent: 'center' }}>
-              <Typography variant="h6" component="div" sx={{ color: '#fff' }}>
+              <Typography 
+                variant="h6" 
+                component={Link} 
+                to="/" 
+                sx={{ color: '#fff', textDecoration: 'none' }} // Make "My Portfolio" a link with white color
+              >
                 My Portfolio
               </Typography>
             </Box>

@@ -46,22 +46,27 @@ const MyProjects = () => {
     {
       title: 'My Portfolio',
       description: 'A personal portfolio website showcasing my projects and skills.',
-      link: 'https://your-portfolio-link.com', // Replace with your actual link
+      link: 'https://github.com/sakethmalladi/portfolio', // Replace with your actual link
     },
     {
       title: 'Hellodoc',
       description: 'A healthcare app connecting users with doctors based on location and specialization.',
-      link: 'https://hellodoc.online', // Replace with your actual link
+      link: 'https://github.com/sakethmalladi/Hello-Doc', // Replace with your actual link
     },
     {
       title: 'Multi Linguistic Sentiment Analysis',
       description: 'Sentiment analysis using Natural Language Processing across multiple languages.',
-      link: 'https://your-mlsa-link.com', // Replace with your actual link
+      link: 'https://github.com/sakethmalladi/Multi-linguistic-Sentiment-Analysis-using-NLP', // Replace with your actual link
     },
     {
       title: 'Facial Recognition Attendance System',
       description: 'An attendance system using facial recognition technology.',
-      link: 'https://your-fras-link.com', // Replace with your actual link
+      link: 'https://github.com/sakethmalladi/Student-Attendance-System', // Replace with your actual link
+    },
+    {
+      title: 'Password Manager',
+      description: 'A password management application developed using C++, OpenSSl, SQLite3.',
+      link: 'https://github.com/sakethmalladi/password-manager', // Replace with your actual link
     },
   ];
 
@@ -75,7 +80,7 @@ const MyProjects = () => {
         p: 3, // Padding around the grid
       }}
     >
-      <Grid container spacing={4} justifyContent="center" alignItems="center">
+      <Grid container spacing={5} justifyContent="center" alignItems="center">
         {projects.map((project, index) => (
           <Grid item xs={12} sm={6} md={3} key={index}>
             <StyledCard>
@@ -91,7 +96,7 @@ const MyProjects = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Learn More
+                  Look at the code
                 </AnimatedButton>
               </CardContent>
             </StyledCard>
